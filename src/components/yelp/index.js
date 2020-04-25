@@ -1,4 +1,5 @@
-const yelpRoutes = require('./yelpRoutes')
+const yelpRoutes = require('./v1/yelpRoutes')
+
 module.exports = (server) => {
-  server.use('/api/yelp', yelpRoutes)
+  server.use('/api/v1/yelp', yelpRoutes)
 }

@@ -1,4 +1,6 @@
 const router = require('express').Router()
 const controllers = require('./yelpControllers')
 
-module.exports = routers
+router.get('/search', controllers.search)
+
+module.exports = router

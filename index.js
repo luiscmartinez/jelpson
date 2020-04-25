@@ -1,9 +1,8 @@
 const port = process.env.PORT || 8000
 const server = require('express')()
 require('./src/middleware')(server)
-
-server.get('/', async (req, res) => {})
+require('./src/components')(server)
 
 server.listen(port, (res, req) => {
-  console.log(`Computer is listening on port http://localhost:${port}`)
+  console.log(`Computer is listening on port ${port}`)
 })
