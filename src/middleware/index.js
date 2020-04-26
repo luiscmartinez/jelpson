@@ -4,7 +4,7 @@ const cors = require('cors')
 const logger = require('morgan')
 
 const corsOptions = {
-  origin: ['http://localhost:3000'],
+  origin: ['http://localhost:3000', process.env.WHITE_LIST_CLIENT],
 }
 module.exports = (server) => {
   server.use(express.json())
