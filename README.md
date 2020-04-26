@@ -24,9 +24,18 @@ You can go ahead and get started here **[here](https://www.yelp.com/fusion)**
 
    ```javascript
    YELP_API_KEY=<YOUR_YELP_API_KEY>
+   WHITE_LIST_CLIENT=<YOUR_CLIENT_URL>
    ```
 
 4. Run the script !
    ```javascript
    npm start [OR] npm run dev
    ```
+
+## Testing 
+* To run all test 
+
+```bash
+npm run test
+```
+
