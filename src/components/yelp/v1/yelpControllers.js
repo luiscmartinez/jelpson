@@ -5,6 +5,7 @@ const yelpUrl = 'https://api.yelp.com/v3/businesses'
 module.exports = {
   async search(req, res, next) {
     const { location, offset, categories } = req.query
+    if (!location) return res.status(400).json({ msg: 'bad request' })
     try {
       axios
         .get(`${yelpUrl}/search`, {
@@ -19,7 +20,7 @@ module.exports = {
           },
         })
         .then((result) => res.json(result.data))
-        .catch((err) => next(Error('yelp error', location, offset, catergories)))
+        .catch((err) => next(Error('yelp error', location, offset, categories, err)))
     } catch (err) {
       next(err)
     }
